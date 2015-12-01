@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0E0695691C0D8CBB00A8D50B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0695681C0D8CBB00A8D50B /* AppDelegate.swift */; };
-		0E06956B1C0D8CBB00A8D50B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E06956A1C0D8CBB00A8D50B /* ViewController.swift */; };
+		0E06956B1C0D8CBB00A8D50B /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E06956A1C0D8CBB00A8D50B /* PlayViewController.swift */; };
 		0E06956E1C0D8CBB00A8D50B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E06956C1C0D8CBB00A8D50B /* Main.storyboard */; };
 		0E0695701C0D8CBB00A8D50B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E06956F1C0D8CBB00A8D50B /* Assets.xcassets */; };
 		0E0695731C0D8CBB00A8D50B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E0695711C0D8CBB00A8D50B /* LaunchScreen.storyboard */; };
 		0E06957E1C0D8CBB00A8D50B /* RockPaperScissorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E06957D1C0D8CBB00A8D50B /* RockPaperScissorsTests.swift */; };
 		0E0695891C0D8CBC00A8D50B /* RockPaperScissorsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0695881C0D8CBC00A8D50B /* RockPaperScissorsUITests.swift */; };
+		0E0695971C0D8E7B00A8D50B /* RockPaperScissorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0695961C0D8E7B00A8D50B /* RockPaperScissorsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		0E0695651C0D8CBB00A8D50B /* RockPaperScissors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RockPaperScissors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E0695681C0D8CBB00A8D50B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0E06956A1C0D8CBB00A8D50B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0E06956A1C0D8CBB00A8D50B /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 		0E06956D1C0D8CBB00A8D50B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E06956F1C0D8CBB00A8D50B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E0695721C0D8CBB00A8D50B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		0E0695841C0D8CBB00A8D50B /* RockPaperScissorsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RockPaperScissorsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E0695881C0D8CBC00A8D50B /* RockPaperScissorsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockPaperScissorsUITests.swift; sourceTree = "<group>"; };
 		0E06958A1C0D8CBC00A8D50B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E0695961C0D8E7B00A8D50B /* RockPaperScissorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RockPaperScissorsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +100,9 @@
 			isa = PBXGroup;
 			children = (
 				0E0695681C0D8CBB00A8D50B /* AppDelegate.swift */,
-				0E06956A1C0D8CBB00A8D50B /* ViewController.swift */,
+				0E06956A1C0D8CBB00A8D50B /* PlayViewController.swift */,
 				0E06956C1C0D8CBB00A8D50B /* Main.storyboard */,
+				0E0695961C0D8E7B00A8D50B /* RockPaperScissorsViewController.swift */,
 				0E06956F1C0D8CBB00A8D50B /* Assets.xcassets */,
 				0E0695711C0D8CBB00A8D50B /* LaunchScreen.storyboard */,
 				0E0695741C0D8CBB00A8D50B /* Info.plist */,
@@ -256,7 +259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E06956B1C0D8CBB00A8D50B /* ViewController.swift in Sources */,
+				0E0695971C0D8E7B00A8D50B /* RockPaperScissorsViewController.swift in Sources */,
+				0E06956B1C0D8CBB00A8D50B /* PlayViewController.swift in Sources */,
 				0E0695691C0D8CBB00A8D50B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
