@@ -38,9 +38,12 @@
                                 <rect key="frame" x="433" y="210" width="37" height="32"/>
                                 <animations/>
                                 <state key="normal" image="Scissors"/>
+                                <connections>
+                                    <segue destination="23D-9i-Ol8" kind="presentation" identifier="scissorPick" id="icP-1e-tNl"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick One To Play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h72-Kj-VbH">
-                                <rect key="frame" x="234" y="274" width="132" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick One To Play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h72-Kj-VbH">
+                                <rect key="frame" x="236" y="274" width="128" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -50,12 +53,12 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="mnB-0s-VO3" firstAttribute="leading" secondItem="8ch-uN-hTA" secondAttribute="trailing" constant="115" id="DkW-qR-FlB"/>
+                            <constraint firstItem="h72-Kj-VbH" firstAttribute="top" secondItem="mnB-0s-VO3" secondAttribute="bottom" constant="82" id="CBd-QP-2Sk"/>
                             <constraint firstItem="8ch-uN-hTA" firstAttribute="top" secondItem="mnB-0s-VO3" secondAttribute="bottom" constant="18" id="OxK-aR-qQg"/>
                             <constraint firstItem="9PC-qn-mqw" firstAttribute="top" secondItem="mnB-0s-VO3" secondAttribute="bottom" constant="18" id="SyP-K0-CtY"/>
+                            <constraint firstItem="h72-Kj-VbH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WwD-rF-JId"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9PC-qn-mqw" secondAttribute="trailing" constant="110" id="XcC-0T-ZTr"/>
                             <constraint firstItem="mnB-0s-VO3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="140" id="ZW4-xL-1aB"/>
-                            <constraint firstItem="9PC-qn-mqw" firstAttribute="leading" secondItem="mnB-0s-VO3" secondAttribute="trailing" constant="114" id="oHv-NX-Jle"/>
                             <constraint firstItem="mnB-0s-VO3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rzS-bK-Bd4"/>
                             <constraint firstItem="8ch-uN-hTA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="110" id="zy5-dF-pyb"/>
                         </constraints>
@@ -64,6 +67,7 @@
                         <outlet property="paper" destination="mnB-0s-VO3" id="Qei-Rw-PmX"/>
                         <outlet property="rock" destination="8ch-uN-hTA" id="3a4-r7-dPz"/>
                         <outlet property="scissors" destination="9PC-qn-mqw" id="aOB-up-ewc"/>
+                        <segue destination="23D-9i-Ol8" kind="presentation" identifier="paperPick" id="VwF-GQ-eGm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -72,7 +76,7 @@
         <!--Rock Paper Scissor View Controller-->
         <scene sceneID="8qe-xj-db5">
             <objects>
-                <viewController id="23D-9i-Ol8" customClass="RockPaperScissorViewController" customModule="RockPaperScissors" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RockPaperScissorViewController" id="23D-9i-Ol8" customClass="RockPaperScissorViewController" customModule="RockPaperScissors" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qcX-yl-Mb3"/>
                         <viewControllerLayoutGuide type="bottom" id="spf-cY-b4D"/>
@@ -80,18 +84,49 @@
                     <view key="view" contentMode="scaleToFill" id="OjU-bY-h5R">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tie" translatesAutoresizingMaskIntoConstraints="NO" id="ddd-bl-ocq">
+                                <rect key="frame" x="255" y="124" width="91" height="100"/>
+                                <animations/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="it a Tie!!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5jL-CN-VE2">
+                                <rect key="frame" x="95" y="289" width="411" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="T4p-AU-wqD"/>
+                                    <constraint firstAttribute="width" constant="411" id="kwQ-Wq-RSq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5jL-CN-VE2" firstAttribute="centerY" secondItem="OjU-bY-h5R" secondAttribute="centerY" id="2TO-ls-j0U"/>
+                            <constraint firstItem="ddd-bl-ocq" firstAttribute="top" secondItem="qcX-yl-Mb3" secondAttribute="bottom" constant="104" id="ZAq-wb-aQY"/>
+                            <constraint firstItem="5jL-CN-VE2" firstAttribute="centerX" secondItem="OjU-bY-h5R" secondAttribute="centerX" id="hMM-dY-R1v"/>
+                            <constraint firstItem="ddd-bl-ocq" firstAttribute="centerX" secondItem="OjU-bY-h5R" secondAttribute="centerX" id="uLa-3r-rkz"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="display" destination="5jL-CN-VE2" id="SeZ-Oi-qfV"/>
+                        <outlet property="resultImage" destination="ddd-bl-ocq" id="amL-JD-AdB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ky9-Xl-h9k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1020" y="966"/>
+            <point key="canvasLocation" x="984" y="234"/>
         </scene>
     </scenes>
     <resources>
         <image name="Paper" width="37" height="32"/>
         <image name="Rock" width="37" height="32"/>
         <image name="Scissors" width="37" height="32"/>
+        <image name="Tie" width="91" height="100"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="icP-1e-tNl"/>
+    </inferredMetricsTieBreakers>
 </document>
