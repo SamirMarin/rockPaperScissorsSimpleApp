@@ -17,7 +17,8 @@ class PlayViewController: UIViewController {
     var paperRockScissor: Int?
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        userChoice = nil
+        paperRockScissor = nil
     }
     //randomaly genarate numb 1, 2, 3 which
     //represent rock, paper, scissors respectively
@@ -31,31 +32,33 @@ class PlayViewController: UIViewController {
     // 1 computer wins
     // 2 user
     private func pickWinnerAndType()->String{
-        if(generateRandomPick() == 1 && userChoice == 3){
+        let compChoice = generateRandomPick()
+        if(compChoice == 1 && userChoice == 3){
             paperRockScissor = 1
             return "rock destroys scissors! you lose!"
         }
-        else if(generateRandomPick() == 1 && userChoice == 2){
+        else if(compChoice == 1 && userChoice == 2){
             paperRockScissor = 2
             return "paper covers rock! you win!"
         }
-        else if(generateRandomPick() == 2 && userChoice == 1){
+        else if(compChoice == 2 && userChoice == 1){
             paperRockScissor = 2
             return "paper covers rock! you lose!"
         }
-        else if(generateRandomPick() == 2 && userChoice == 3){
+        else if(compChoice == 2 && userChoice == 3){
             paperRockScissor = 3
             return "scissor cuts paper! you win!"
         }
-        else if(generateRandomPick() == 3 && userChoice == 1){
+        else if(compChoice == 3 && userChoice == 1){
             paperRockScissor = 1
             return "rock destroys scissors! you win!"
         }
-        else if(generateRandomPick() == 3 && userChoice == 2){
+        else if(compChoice == 3 && userChoice == 2){
             paperRockScissor = 3
             return "scissor cuts paper! you lose!"
         }
         else{
+            paperRockScissor = nil
             return "it's a TIE!!!"
         }
     }
@@ -65,8 +68,10 @@ class PlayViewController: UIViewController {
             let controller = segue.destinationViewController as! RockPaperScissorViewController
             setControllerVar(controller)
             
+            
     }
         else if segue.identifier == "scissorPick"{
+            userChoice = 3
             let controller = segue.destinationViewController as! RockPaperScissorViewController
             setControllerVar(controller)
             
@@ -79,6 +84,7 @@ class PlayViewController: UIViewController {
         controller.rockPaperScissor = self.paperRockScissor
         
     }
+    
     
 
     @IBAction func rockPick(sender: UIButton) {

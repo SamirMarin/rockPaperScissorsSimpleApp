@@ -21,6 +21,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ch-uN-hTA">
                                 <rect key="frame" x="130" y="210" width="37" height="32"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="TY6-Ww-DlX"/>
+                                    <constraint firstAttribute="width" constant="37" id="uO3-MF-bPV"/>
+                                </constraints>
                                 <state key="normal" image="Rock"/>
                                 <connections>
                                     <action selector="rockPick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VBY-tJ-6J9"/>
@@ -100,12 +104,22 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ah5-dL-QR2">
+                                <rect key="frame" x="265" y="411" width="71" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Play Again"/>
+                                <connections>
+                                    <action selector="playAgain:" destination="23D-9i-Ol8" eventType="touchUpInside" id="rRM-0R-uKp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="5jL-CN-VE2" firstAttribute="centerY" secondItem="OjU-bY-h5R" secondAttribute="centerY" id="2TO-ls-j0U"/>
                             <constraint firstItem="ddd-bl-ocq" firstAttribute="top" secondItem="qcX-yl-Mb3" secondAttribute="bottom" constant="104" id="ZAq-wb-aQY"/>
+                            <constraint firstItem="Ah5-dL-QR2" firstAttribute="centerX" secondItem="OjU-bY-h5R" secondAttribute="centerX" id="aXR-8O-1zD"/>
+                            <constraint firstItem="Ah5-dL-QR2" firstAttribute="top" secondItem="5jL-CN-VE2" secondAttribute="bottom" constant="101" id="eQS-6M-od7"/>
                             <constraint firstItem="5jL-CN-VE2" firstAttribute="centerX" secondItem="OjU-bY-h5R" secondAttribute="centerX" id="hMM-dY-R1v"/>
                             <constraint firstItem="ddd-bl-ocq" firstAttribute="centerX" secondItem="OjU-bY-h5R" secondAttribute="centerX" id="uLa-3r-rkz"/>
                         </constraints>

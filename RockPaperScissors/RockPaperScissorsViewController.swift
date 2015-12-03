@@ -26,11 +26,11 @@ class RockPaperScissorViewController: UIViewController{
         }
         if let choice = self.rockPaperScissor{
             if(choice == 1){
-                resultImage.image = UIImage(named: "PaperWinsToRock")
+                resultImage.image = UIImage(named: "RockWinsToScissors")
                 
             }
             else if(choice == 2){
-                resultImage.image = UIImage(named: "RockWinsToScissors")
+                resultImage.image = UIImage(named: "PaperWinsToRock")
             }
             else if(choice == 3){
                 resultImage.image = UIImage(named: "ScissorWinsToPaper")
@@ -39,6 +39,11 @@ class RockPaperScissorViewController: UIViewController{
         else{
             resultImage.image = UIImage(named: "Tie")
         }
+    }
+    
+    
+    @IBAction func playAgain(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }
 
